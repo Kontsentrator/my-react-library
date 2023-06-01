@@ -1,0 +1,34 @@
+.button {
+    --button-background-color: var(--blue);
+    --button-text-color: var(--white);
+
+    padding: 10px 30px;
+    background-color: var(--button-background-color);
+    color: var(--button-text-color);
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s linear;
+
+    &_secondary {
+        background-color: transparent;
+        border: 2px solid;
+        border-color: var(--button-background-color);
+        --button-text-color: var(--button-background-color);
+        border-radius: 20px;
+    }
+
+    &_success {
+        --button-background-color: var(--green);
+    }
+
+    &_error {
+        --button-background-color: var(--error);
+    }
+
+    &_disabled {
+        --button-background-color: var(--background-grey);
+        cursor: default;
+    }
+}

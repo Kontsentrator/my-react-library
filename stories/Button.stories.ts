@@ -13,13 +13,13 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    childrend: 'Button',
+    children: 'Button',
   },
 };
 
 export const Disabled: Story = {
   args: {
-    childrend: 'Button',
+    children: 'Button',
     disabled: true,
   },
 };

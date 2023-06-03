@@ -17,8 +17,10 @@ const TextBox: React.FC<TextBoxProps> = ({ placeholder, disabled, status = 'syst
     const classNames = ['textBox', disabled && 'textBox_disabled', status && `textBox_status_${status}`, view && `textBox_view_${view}`];
 
     const handleChange = React.useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
-        onChange?.(e.target.value);
-    }, [onChange]);
+        if (onChange && !disabled) {
+            onChange(e.target.value);
+        }
+    }, [disabled, onChange]);
 
     return <input className={classNames.join(' ')} value={value} placeholder={placeholder} onChange={handleChange} disabled={disabled} required={required} />
 };

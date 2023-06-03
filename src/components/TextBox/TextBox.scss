@@ -1,0 +1,44 @@
+.textBox {
+    --textbox-background-color: var(--blue);
+    --textbox-text-color: var(--white);
+
+    padding: 10px 30px;
+    background-color: var(--textbox-background-color);
+    color: var(--textbox-text-color);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 15px;
+    transition: background-color 0.2s linear;
+
+    &::placeholder {
+        color: var(--textbox-text-color);
+    }
+
+    &_view {
+        &_secondary {
+            background-color: transparent;
+            border: 2px solid;
+            border-color: var(--textbox-background-color);
+            --textbox-text-color: var(--textbox-background-color);
+            border-radius: 10px;
+        }
+    }
+
+    &_status {
+        &_success {
+            --textbox-background-color: var(--green);
+        }
+
+        &_error {
+            --textbox-background-color: var(--error);
+        }
+    }
+
+
+
+    &_disabled {
+        --textbox-background-color: var(--background-grey);
+        cursor: default;
+    }
+}

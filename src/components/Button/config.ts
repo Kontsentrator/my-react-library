@@ -1,4 +1,4 @@
-const ButtonStatus = ['system', 'success', 'error'] as const;
+const ButtonStatus = ['system', 'success', 'error', 'warning'] as const;
 export type ButtonStatusType = typeof ButtonStatus[number];
 
 const ButtonView = ['primary', 'secondary'] as const;

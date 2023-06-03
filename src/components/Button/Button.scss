@@ -29,6 +29,10 @@
         &_error {
             --button-background-color: var(--error);
         }
+
+        &_warning {
+            --button-background-color: var(--yellow);
+        }
     }
 
 

@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.0.0-development",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -19,7 +19,8 @@
     "size": "size-limit",
     "analyze": "size-limit --why",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "semantic-release": "semantic-release"
   },
   "peerDependencies": {
     "react": ">=16"
@@ -76,7 +77,8 @@
     "storybook": "7.0.18",
     "tsdx": "^0.14.1",
     "tslib": "^2.5.2",
-    "typescript": "^5.0.4"
+    "typescript": "^5.0.4",
+    "semantic-release": "^21.0.5"
   },
   "dependencies": {
     "@storybook/preset-scss": "^1.0.3",
@@ -84,5 +86,9 @@
     "sass": "^1.62.1",
     "sass-loader": "^13.3.1",
     "style-loader": "^3.3.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kontsentrator/my-react-library.git"
   }
 }

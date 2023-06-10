@@ -36,7 +36,7 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "my-react-library",
+  "name": "ordinary-react-library",
   "author": "Dmitriy Prohorov",
   "module": "dist/my-react-library.esm.js",
   "size-limit": [

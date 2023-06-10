@@ -33,6 +33,10 @@
         &_error {
             --textbox-background-color: var(--error);
         }
+
+        &_warning {
+            --textbox-background-color: var(--yellow)
+        }
     }
 
 

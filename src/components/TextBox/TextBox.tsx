@@ -11,9 +11,10 @@ type TextBoxProps = {
     disabled?: boolean;
     status?: TextBoxStatusType;
     view?: TextBoxViewType;
+    readOnly?: boolean;
 }
 
-const TextBox: React.FC<TextBoxProps> = ({ placeholder, disabled, status = 'system', view = 'primary', onChange, required, value }) => {
+const TextBox: React.FC<TextBoxProps> = ({ placeholder, disabled, status = 'system', view = 'primary', onChange, required, value, readOnly }) => {
     const classNames = ['textBox', disabled && 'textBox_disabled', status && `textBox_status_${status}`, view && `textBox_view_${view}`];
 
     const handleChange = React.useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
@@ -22,7 +23,7 @@ const TextBox: React.FC<TextBoxProps> = ({ placeholder, disabled, status = 'syst
         }
     }, [disabled, onChange]);
 
-    return <input className={classNames.join(' ')} value={value} placeholder={placeholder} onChange={handleChange} disabled={disabled} required={required} />
+    return <input className={classNames.join(' ')} value={value} placeholder={placeholder} onChange={handleChange} disabled={disabled} required={required} readOnly={readOnly} />
 };
 
 export default TextBox;
